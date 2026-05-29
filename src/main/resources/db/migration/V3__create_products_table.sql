@@ -1,0 +1,14 @@
+CREATE TABLE products (
+      id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+      name VARCHAR(255) NOT NULL,
+      price DOUBLE NOT NULL,
+      stock_quantity BIGINT DEFAULT 0,
+      unit_sold BIGINT DEFAULT 0,
+      version BIGINT DEFAULT 0,
+      active BOOLEAN DEFAULT TRUE,
+      deleted BOOLEAN DEFAULT FALSE,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+      updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+      deleted_at DATETIME NULL,
+      CONSTRAINT pk_products PRIMARY KEY (id)
+);
